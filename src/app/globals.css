@@ -1,10 +1,25 @@
 @import "tailwindcss";
 
-
 @theme{
-  --font-oswald: "Oswald", sans-serif;
+  --font-family-oswald: "Oswald", sans-serif;
+  --font-family-coda: "Coda", sans-serif;
   --background-image-grain: url('/assets/images/noisy-background.png');
   --animate-noisy-bg: noisy-bg 1s steps(8, end) infinite both;
+  
+  --color-primary-background: rgba(255, 255, 255, 0.05);
+  --color-primary-foreground: #fff;
+  --color-secondary-background: rgba(255, 255, 255, 0.03);
+  --color-secondary-foreground: rgba(255,255,255,0.4);
+  
+  --color-blue-joust: #56acff;
+  --color-blue-cosmos: #003049;
+  --color-blue-hera: #7179ef;
+  
+  --color-green-benzol: #00d372;
+  
+  --color-pink-ice: #d87cac;
+  
+  --color-border: rgb(255 255 255 / 0.05);
 }
 
 @layer utilities{

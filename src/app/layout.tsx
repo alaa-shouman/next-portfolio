@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Oswald } from "next/font/google";
+import { Bricolage_Grotesque, Oswald,Coda } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import GrainEffect from "@/components/visualEffects/grainEffect";
@@ -12,6 +12,12 @@ const MainFont = Bricolage_Grotesque({
 const font = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
+});
+
+const coda = Coda({
+  variable: "--font-coda",
+  weight: "400",
+  subsets: ["latin"],
 });
 
 
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html >
       <body
-        className={cn(MainFont.className, font.variable, "bg-black text-gray-900 antialiased")}
+        className={cn(MainFont.className, font.variable,coda.variable, "bg-black text-gray-900 antialiased")}
       >
         <GrainEffect />
         <Cursor color="#FFF" />
