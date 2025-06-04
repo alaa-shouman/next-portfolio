@@ -7,9 +7,10 @@ interface ButtonProps {
     link?: string;
     isIcon?: boolean;
     className?: string;
+    onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, isIcon, link }) => {
+const Button: React.FC<ButtonProps> = ({ children, className, isIcon, link,onClick }) => {
     return (
         <>
             {link ? (
@@ -23,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({ children, className, isIcon, link }) =>
                     </ButtonBody>
                 </Link>
             ) : (
-                <ButtonBody className={className} IsIcon={isIcon || false}>
+                <ButtonBody className={className} IsIcon={isIcon || false} onClick={onClick}>
                     {children}
                 </ButtonBody>
             )}
@@ -35,11 +36,13 @@ interface ButtoBodyProps {
     children: ReactNode;
     IsIcon: boolean;
     className?: string;
+    onClick?: () => void;
 }
 
-const ButtonBody: React.FC<ButtoBodyProps> = ({ children, className, IsIcon }) => {
+const ButtonBody: React.FC<ButtoBodyProps> = ({ children, className, IsIcon,onClick }) => {
     return (
         <div
+        onClick={onClick}
             className={`cursor-pointer flex-none w-auto h-full  `}
         >
             <div className={cn('flex items-center justify-center gap-2 bg-primary-background rounded-full select-none whitespace-nowrap text-primary-foreground text-sm font-medium hover:bg-white/[0.1] transition-colors duration-100',

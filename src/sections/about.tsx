@@ -1,4 +1,5 @@
 import MeCard from '@/components/card/Me'
+import ResumeCard from '@/components/card/ResumeCard'
 import Heading from '@/components/heading/Heading'
 import Card from '@/components/UI/Card'
 import React from 'react'
@@ -12,8 +13,8 @@ const About = () => {
                 title_2="Me" />
             <div className="space-y-4 my-8 ">
                 <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-3">
-                    <MeCard title='ME'>ME</MeCard>
-                    <Card title='Resume'>Resume</Card>
+                    <MeCard/>
+                    <ResumeCard/>
                     <Card title='Background'>Background</Card>
                     <Card title='Gallery' className='2xl:hidden'>Gallery</Card>
                     <div className="space-y-4">
@@ -25,9 +26,7 @@ const About = () => {
                         <Card title='Experience'>Experience</Card>
                         <Card title='Education'>Education</Card>
                     </div>
-                    <div className='hidden 2xl:flex'>
-
-                    </div>
+                    
                 </div>
             </div>
         </div>
