@@ -4,6 +4,7 @@ import Education from '@/components/card/Education'
 import Experience from '@/components/card/Experience'
 import MeCard from '@/components/card/Me'
 import ResumeCard from '@/components/card/ResumeCard'
+import Stack from '@/components/card/Stack'
 import Heading from '@/components/heading/Heading'
 import Card from '@/components/UI/Card'
 import Gallery from '@/components/UI/Gallery'
@@ -25,13 +26,12 @@ const About = () => {
                         <Gallery />
                     </Card>
                     <div className="space-y-4">
-                        <Card title='Instructor'>Instructor</Card>
                         <Certifications />
+                        <Education />
                     </div>
                     <div className="space-y-4">
-                        <Card title='Stack'>Stack</Card>
+                        <Stack />
                         <Experience/>
-                        <Education />
                     </div>
                     
                 </div>

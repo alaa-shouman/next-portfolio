@@ -17,6 +17,12 @@ export const certificationsData: CertificationItem[] = [
     },
     {
         date: "2023",
+        title: "Offensive Security Certified Bootcamp (OSCB)",
+        subtitle: "Semicolon",
+        isCourse: true,
+    },
+    {
+        date: "2023",
         title: "Training of Trainers (ToT)",
         subtitle: "Robogeeks",
         isCourse: true,
