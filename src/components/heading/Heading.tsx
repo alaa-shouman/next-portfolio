@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { FC } from "react";
 import SvgCurve from "../visualEffects/svg-curve";
 import { HeadingAnimatedSvg } from "./heading-animated-svg";
@@ -18,20 +18,20 @@ const Heading: FC<HeadingProps> = ({ number, title_1, title_2 }) => {
                     <span className="bottom_fade bg-clip-text text-transparent">{number}</span>
                 </h2>
             </div>
-            
+
             {/* Main content */}
             <div className="relative z-10">
                 <div className="flex items-center flex-nowrap min-h-min overflow-hidden p-0 w-full font-oswald">
                     <p className="text-[17vw] lg:text-[9vw] leading-[100%] text-primary-foreground mr-6 font-normal">
                         {title_1}
                     </p>
-                    <HeadingAnimatedSvg text='Learn More'/>
+                    <HeadingAnimatedSvg text='Learn More' />
                     <p className="text-[17vw] lg:text-[9vw] leading-[100%] text-primary-foreground italic font-light">
                         {title_2}
                     </p>
                 </div>
             </div>
-            <SvgCurve/>
+            <SvgCurve />
         </div>
     );
 };

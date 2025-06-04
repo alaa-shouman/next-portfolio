@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from 'react'
 import Card from '../UI/Card'
 import { stackData } from '@/data/stack'
@@ -20,8 +20,8 @@ const Stack = () => {
                                     className='flex items-center justify-center w-12 h-12 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors group cursor-pointer'
                                     title={item.name}
                                 >
-                                    <Image 
-                                        src={item.icon} 
+                                    <Image
+                                        src={item.icon}
                                         alt={item.name}
                                         className='w-8 h-8 group-hover:scale-110 transition-transform'
                                         width={32}

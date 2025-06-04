@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import BackgroundCard from '@/components/card/BackgroundCard'
 import Certifications from '@/components/card/Certifications'
 import Education from '@/components/card/Education'
@@ -20,8 +20,8 @@ const About = () => {
                 title_2="Me" />
             <div className="space-y-4 my-8 ">
                 <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-3">
-                    <MeCard/>
-                    <ResumeCard/>
+                    <MeCard />
+                    <ResumeCard />
                     <BackgroundCard />
                     <Card title='Gallery' className=''>
                         <Gallery />
@@ -32,9 +32,9 @@ const About = () => {
                     </div>
                     <div className="space-y-4">
                         <Stack />
-                        <Experience/>
+                        <Experience />
                     </div>
-                    
+
                 </div>
             </div>
         </div>

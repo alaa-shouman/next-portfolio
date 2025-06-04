@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from 'react'
 // @ts-ignore
 import WaterWave from 'react-water-wave'
@@ -11,7 +11,7 @@ interface WaterWaveProps {
 }
 
 
-export const WaterWaveWrapper: React.FC<WaterWaveProps> = ({ imageUrl,dropRadius,perturbance,resolution, children }) => {
+export const WaterWaveWrapper: React.FC<WaterWaveProps> = ({ imageUrl, dropRadius, perturbance, resolution, children }) => {
     return <WaterWave imageUrl={imageUrl}
         dropRadius={dropRadius}
         perturbance={perturbance}

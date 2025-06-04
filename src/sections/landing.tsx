@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Header from '@/components/navigation/header/Header'
 import LiveClock from '@/components/UI/live-clock'
 import MagneticEffect from '@/components/visualEffects/magneticEffect'
