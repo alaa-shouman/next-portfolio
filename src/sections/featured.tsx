@@ -20,6 +20,7 @@ const Featured = () => {
                       logo={project.logo}
                       title={project.title}
                       tag={project.tag}
+                      image={project.image}
                       video={project.video}
                       active={activeCard === index}
                       onClick={() => setActiveCard(index)}
