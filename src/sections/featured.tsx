@@ -1,3 +1,4 @@
+'use client';
 import FeaturedCard from '@/components/card/FeaturedCard'
 import Heading from '@/components/heading/Heading'
 import { featuredData } from '@/data'

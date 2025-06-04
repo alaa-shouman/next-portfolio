@@ -1,3 +1,4 @@
+'use client'
 import BackgroundCard from '@/components/card/BackgroundCard'
 import Certifications from '@/components/card/Certifications'
 import Education from '@/components/card/Education'

@@ -1,3 +1,4 @@
+'use client'
 import { FC } from "react";
 import SvgCurve from "../visualEffects/svg-curve";
 import { HeadingAnimatedSvg } from "./heading-animated-svg";

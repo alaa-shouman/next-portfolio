@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import MyImg from "/public/assets/images/gallery/Alaa.png";
 import Card from "../UI/Card";
