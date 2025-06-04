@@ -1,7 +1,9 @@
+import BackgroundCard from '@/components/card/BackgroundCard'
 import MeCard from '@/components/card/Me'
 import ResumeCard from '@/components/card/ResumeCard'
 import Heading from '@/components/heading/Heading'
 import Card from '@/components/UI/Card'
+import Gallery from '@/components/UI/Gallery'
 import React from 'react'
 
 const About = () => {
@@ -15,8 +17,10 @@ const About = () => {
                 <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-3">
                     <MeCard/>
                     <ResumeCard/>
-                    <Card title='Background'>Background</Card>
-                    <Card title='Gallery' className='2xl:hidden'>Gallery</Card>
+                    <BackgroundCard />
+                    <Card title='Gallery' className=''>
+                        <Gallery />
+                    </Card>
                     <div className="space-y-4">
                         <Card title='Instructor'>Instructor</Card>
                         <Card title='Certifications'>Certifications</Card>
