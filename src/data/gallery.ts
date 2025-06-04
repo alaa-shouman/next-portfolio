@@ -2,7 +2,6 @@ import Img1 from "/public/assets/images/gallery/Alaa.png";
 import Img2 from "/public//assets/images/gallery/Alaa_2.jpg";
 import Img3 from "/public//assets/images/gallery/Alaa_3.jpg";
 import Img4 from "/public//assets/images/gallery/Alaa_4.jpg";
-import Img5 from "/public//assets/images/gallery/Alaa_5.jpg";
 
 export const galleryImages = [
   {
@@ -21,10 +20,7 @@ export const galleryImages = [
     id: 3,
     img: Img4,
   },
-  {
-    id: 4,
-    img: Img5,
-  },
+
 ];
 
 // TypeScript interface for type safety
