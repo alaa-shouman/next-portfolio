@@ -1,4 +1,6 @@
 import BackgroundCard from '@/components/card/BackgroundCard'
+import Certifications from '@/components/card/Certifications'
+import Education from '@/components/card/Education'
 import Experience from '@/components/card/Experience'
 import MeCard from '@/components/card/Me'
 import ResumeCard from '@/components/card/ResumeCard'
@@ -24,12 +26,12 @@ const About = () => {
                     </Card>
                     <div className="space-y-4">
                         <Card title='Instructor'>Instructor</Card>
-                        <Card title='Certifications'>Certifications</Card>
+                        <Certifications />
                     </div>
                     <div className="space-y-4">
                         <Card title='Stack'>Stack</Card>
                         <Experience/>
-                        <Card title='Education'>Education</Card>
+                        <Education />
                     </div>
                     
                 </div>

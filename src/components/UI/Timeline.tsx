@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface TimelineProps {
     // Define any props if needed
@@ -43,9 +44,10 @@ export const TimelineItem: FC<TimelineItemProps> = ({ date, subtitle, title, isC
                             href={link} 
                             target='_blank' 
                             rel='noopener noreferrer'
-                            className='hover:text-green-400 transition-colors'
+                            className='hover:text-green-400 transition-colors flex items-center gap-x-2 group'
                         >
-                            {title}
+                            <span>{title}</span>
+                            <FaExternalLinkAlt className='w-4 h-4 text-gray-400 group-hover:text-green-400 transition-colors' />
                         </a>
                     ) : (
                         title
