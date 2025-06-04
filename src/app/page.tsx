@@ -1,6 +1,7 @@
 "use client";
 
 import { WaterWaveWrapper } from "@/components/visualEffects/waterWave";
+import About from "@/sections/about";
 import Featured from "@/sections/featured";
 import Landing from "@/sections/landing";
 
@@ -17,6 +18,7 @@ export default function Home() {
           <div className="p-10 w-full">
             <Landing />
             <Featured/>
+            <About/>
           </div>
         )
       }

@@ -4,7 +4,7 @@ import { featuredData } from '@/data'
 import React, { useState } from 'react'
 
 const Featured = () => {
-    const [activeCard, setActiveCard] = useState(1);
+    const [activeCard, setActiveCard] = useState(0);
 
   return (
     <div className='pt-24 px-3 lg:px-8 '>
