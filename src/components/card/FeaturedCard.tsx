@@ -1,6 +1,12 @@
 import { FC, ReactNode, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+
+interface Technology {
+  name: string;
+  icon: string;
+}
 
 interface FeaturedCardProps {
   logo?: ReactNode;
@@ -10,6 +16,8 @@ interface FeaturedCardProps {
   image?: string;
   active: boolean;
   onClick?: () => void;
+  link: string;
+  technologies?: Technology[];
 }
 
 const FeaturedCard: FC<FeaturedCardProps> = ({
@@ -19,9 +27,14 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
   video,
   image,
   active,
-  onClick
+  onClick,
+  link,
+  technologies
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Check if it's a GitHub link or deployed project
+  const isGitHubLink = link.includes('github.com') || link === '#';
 
   // Control video playback when active state changes
   useEffect(() => {
@@ -91,6 +104,42 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
           "absolute inset-0 transition-all duration-500",
           active ? "bg-black/20" : "bg-black/60"
         )} />
+
+        {/* Project Link Button - only show when active and link exists */}
+        {active && link && link !== '#' && (
+          <div className="absolute top-4 right-4 z-10">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "group relative flex items-center justify-center",
+                "w-12 h-12 rounded-xl",
+                "bg-black/10 backdrop-blur-md border border-black/20",
+                "text-black shadow-lg hover:shadow-xl",
+                "transition-all duration-300 ease-out",
+                "hover:bg-black/20 hover:scale-110",
+                "before:absolute before:inset-0 before:rounded-xl",
+                "before:bg-gradient-to-br before:from-black/20 before:to-transparent",
+                "before:opacity-0 before:transition-opacity before:duration-300",
+                "hover:before:opacity-100"
+              )}
+              onClick={(e) => e.stopPropagation()}
+              title={isGitHubLink ? "View on GitHub" : "View Live Project"}
+            >
+              <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                {isGitHubLink ? (
+                  <FaGithub className="w-5 h-5" />
+                ) : (
+                  <FaExternalLinkAlt className="w-5 h-5" />
+                )}
+              </div>
+
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+            </a>
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -102,11 +151,41 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
         )}
 
         <h3 className={cn(
-          "text-xl font-semibold mb-2 transition-colors duration-300",
+          "text-xl font-semibold mb-3 transition-colors duration-300",
           active ? "text-primary-foreground" : "text-secondary-foreground"
         )}>
           {title}
         </h3>
+
+        {/* Technology Stack Icons */}
+        {technologies && technologies.length > 0 && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "flex items-center justify-center w-8 h-8 rounded bg-primary-background/30 hover:bg-primary-background/50 transition-colors",
+                  active && "bg-primary-background/50 hover:bg-primary-background/70"
+                )}
+                title={tech.name}
+              >
+                <Image
+                  src={tech.icon}
+                  alt={tech.name}
+                  width={20}
+                  height={20}
+                  className={cn(
+                    "w-5 h-5 transition-all duration-500",
+                    !active && "grayscale brightness-75"
+                  )}
+                  onError={(e:any) => {
+                    console.error(`Failed to load icon for ${tech.name}`);
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         <span className={cn(
           "text-sm px-3 py-1 rounded-full transition-colors duration-300",

@@ -15,7 +15,9 @@ const eslintConfig = [
     rules: {
       "@typescript-eslint/ban-ts-comment": "off",
       "react/no-unescaped-entities": "off",
-      "react-hooks/exhaustive-deps": "warn"
+      "react-hooks/exhaustive-deps": "warn",
+      "no-explisit-any": "off",
+      "no-unused-vars": "off",
     }
   }
 ];

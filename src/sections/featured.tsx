@@ -1,7 +1,7 @@
 "use client";
 import FeaturedCard from '@/components/card/FeaturedCard'
 import Heading from '@/components/heading/Heading'
-import { featuredData } from '@/data'
+import { featuredData } from '@/data/featured'
 import React, { useState } from 'react'
 
 const Featured = () => {
@@ -25,6 +25,8 @@ const Featured = () => {
                         video={project.video}
                         active={activeCard === index}
                         onClick={() => setActiveCard(index)}
+                        link={project.link}
+                        technologies={project.technologies}
                     />
                 ))}
             </div>
