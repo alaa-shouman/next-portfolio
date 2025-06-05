@@ -23,7 +23,7 @@ const Landing = () => {
                     </div>
                     <div className="relative">
                         <span>Brilliance</span>
-                        <div className='text-[1rem] leading-[1.4rem] tracking-[-0.07rem] absolute top-[14vw] lg:top-[10vw]  left-0  w-[30rem] uppercase font-normal'>
+                        <div className='text-[1rem] leading-[1.4rem] tracking-[-0.07rem] absolute top-[14vw] lg:top-[10vw] left-1/2 transform -translate-x-1/2 lg:left-0 lg:transform-none w-[30rem] uppercase font-normal'>
                             <span>Empowering innovation </span>
                             <br />
                             <span>Through inspire Design </span>

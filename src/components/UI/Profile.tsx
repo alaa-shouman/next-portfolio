@@ -1,13 +1,13 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React from 'react'
-
+import profile from '/public/assets/images/profile.jpg'
 const Profile = () => {
     return (
         <div className={cn('flex items-center gap-x-2 sm:gap-x-4 transition-colors duration-75 text-primary-foreground flex-col sm:flex-row text-center sm:text-left')}>
             <div className="relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full flex items-center justify-center bg-gradient-to-r from-blue-joust to-green-benzol">
                 <Image
-                    src="/assets/images/profile.jpg"
+                    src={profile}
                     alt="Profile"
                     width={95}
                     height={95}
