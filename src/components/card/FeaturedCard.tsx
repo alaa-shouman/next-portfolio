@@ -178,7 +178,7 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                     "w-5 h-5 transition-all duration-500",
                     !active && "grayscale brightness-75"
                   )}
-                  onError={(e:any) => {
+                  onError={() => {
                     console.error(`Failed to load icon for ${tech.name}`);
                   }}
                 />
