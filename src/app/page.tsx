@@ -1,16 +1,22 @@
 "use client";
 
+// import { WaterWaveWrapper } from "@/components/visualEffects/waterWave";
+import About from "@/sections/about";
+import Featured from "@/sections/featured";
+import Landing from "@/sections/landing";
 import dynamic from "next/dynamic";
 
-// Dynamically import components that might cause SSR issues
+// import dynamic from "next/dynamic";
+
+// // Dynamically import components that might cause SSR issues
 const WaterWaveWrapper = dynamic(
-  () => import("@/components/visualEffects/waterWave").then((mod) => ({ default: mod.WaterWaveWrapper })),
+  () => import("@/components/visualEffects/waterWave").then(mod => ({ default: mod.WaterWaveWrapper })),
   { ssr: false }
 );
 
-const About = dynamic(() => import("@/sections/about"), { ssr: false });
-const Featured = dynamic(() => import("@/sections/featured"), { ssr: false });
-const Landing = dynamic(() => import("@/sections/landing"), { ssr: false });
+// const About = dynamic(() => import("@/sections/about"), { ssr: false });
+// const Featured = dynamic(() => import("@/sections/featured"), { ssr: false });
+// const Landing = dynamic(() => import("@/sections/landing"), { ssr: false });
 
 export default function Home() {
   return (
