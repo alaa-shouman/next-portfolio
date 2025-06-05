@@ -8,7 +8,7 @@ const Featured = () => {
     const [activeCard, setActiveCard] = useState(0);
 
     return (
-        <div className='pt-24 px-3 lg:px-8 '>
+        <div className='pt-24 md:px-3 lg:px-8 '>
             <Heading
                 number="01"
                 title_1="Featured"

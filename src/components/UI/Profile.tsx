@@ -4,18 +4,19 @@ import React from 'react'
 
 const Profile = () => {
     return (
-        <div className={cn('flex items-center gap-x-2 transition-colors duration-75 text-primary-foreground')}>
-            <div className="relative w-[100px] h-[100px] rounded-full flex items-center justify-center bg-gradient-to-r from-blue-joust to-green-benzol">
+        <div className={cn('flex items-center gap-x-2 sm:gap-x-4 transition-colors duration-75 text-primary-foreground flex-col sm:flex-row text-center sm:text-left')}>
+            <div className="relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full flex items-center justify-center bg-gradient-to-r from-blue-joust to-green-benzol">
                 <Image
                     src="/assets/images/profile.jpg"
                     alt="Profile"
                     width={95}
                     height={95}
-                    className="w-[95px] h-[95px] border-[0.2vw] border-blue-cosmos rounded-full object-cover"
+                    className="w-[75px] h-[75px] sm:w-[95px] sm:h-[95px] border-[2px] sm:border-[0.2vw] border-blue-cosmos rounded-full object-cover"
+                    priority
                 /> 
-                <div className="w-3 h-3 rounded-full bg-green-benzol border-blue-cosmos absolute right-0 bottom-5"></div>
+                <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-benzol border-blue-cosmos absolute right-0 bottom-3 sm:bottom-5"></div>
             </div>
-            <div className="text-3xl font-medium">Alaa Shouman </div>
+            <div className="text-xl sm:text-3xl font-medium">Alaa Shouman</div>
         </div>
     )
 }
