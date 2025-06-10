@@ -2,6 +2,7 @@
 import Header from '@/components/navigation/header/Header'
 import LiveClock from '@/components/UI/live-clock'
 import MagneticEffect from '@/components/visualEffects/magneticEffect'
+import ShinyText from '@/components/visualEffects/Shiny'
 import React from 'react'
 
 const Landing = () => {
@@ -16,13 +17,16 @@ const Landing = () => {
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 leading-[14vw] lg:leading-[10vw] 2xl:leading-[9rem] font-medium tracking-[-0.3rem]">
                 <div className='flex flex-col items-center justify-center text-center text-primary-foreground text-[18vw] lg:text-[14vw] 2xl:text-[12rem]'>
                     <div>
-                        <span>Code</span>
+                        {/* <span>Code</span> */}
+                        <ShinyText text="Code" disabled={false} speed={3} />
                     </div>
                     <div>
-                        <span>Crafting</span>
+                        {/* <span>Crafting</span> */}
+                        <ShinyText text="Crafting" disabled={false} speed={3} />
                     </div>
                     <div className="relative">
-                        <span>Brilliance</span>
+                        {/* <span>Brilliance</span> */}
+                        <ShinyText text="Brilliance" disabled={false} speed={3} />
                         <div className='text-[1rem] leading-[1.4rem] tracking-[-0.07rem] absolute top-[14vw] lg:top-[10vw] left-1/2 transform -translate-x-1/2 lg:left-0 lg:transform-none w-[30rem] uppercase font-normal'>
                             <span>Empowering innovation </span>
                             <br />
