@@ -27,14 +27,18 @@ const Gallery = () => {
         {galleryImages.map((image, index) => (
           <SwiperSlide key={image.id || index}>
             <div className="relative w-full h-full">
-              <Image
-                src={image.img}
-                alt={`Gallery image ${index + 1}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority={index === 0} // Prioritize loading the first image
-              />
+                <Image
+                  src={image.img}
+                  alt={`Gallery image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index === 0}
+                  onError={(e) => {
+                    console.error('Image failed to load:', image.img);
+                    e.currentTarget.src = '/assets/images/placeholder.jpg'; // Add a fallback
+                  }}
+                />
             </div>
           </SwiperSlide>
         ))}

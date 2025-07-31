@@ -17,6 +17,37 @@ export interface FeaturedProject {
 
 export const featuredData: FeaturedProject[] = [
   {
+    title: "Hotel Management System",
+    logo: "",
+    tag: "Electron React - 2025",
+    image: "/assets/images/hms.png",
+    credits: "Alaa",
+    link: "https://github.com/alaa-shouman",
+    description: "A modern hotel management system built with Electron React and CASL for permission managing and role-based access control",
+    technologies: [
+      {
+        name: "Electron",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg"
+      },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+      },
+      {
+        name: "Node.js",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        name: "Postgresql",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+      }
+    ]
+  },
+  {
     title: "Jobify",
     logo: "",
     tag: "React - 2025",
@@ -124,29 +155,29 @@ export const featuredData: FeaturedProject[] = [
       }
     ]
   },
-  {
-    title: "Social Media Video App UI",
-    logo: "",
-    tag: "UI/UX - Dec 2023",
-    video: "https://cdn.dribbble.com/userupload/13004443/file/original-abd310aef7e5503eb49ec96040be757d.mp4",
-    credits: "Julia Dmitrievna",
-    link: "https://dribbble.com/shots/23626219-Social-Media-Video-App",
-    description: "Modern social media application interface design",
-    technologies: [
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-      },
-      {
-        name: "Sketch",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg"
-      },
-      {
-        name: "Adobe XD",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg"
-      }
-    ]
-  },
+  // {
+  //   title: "Social Media Video App UI",
+  //   logo: "",
+  //   tag: "UI/UX - Dec 2023",
+  //   video: "https://cdn.dribbble.com/userupload/13004443/file/original-abd310aef7e5503eb49ec96040be757d.mp4",
+  //   credits: "Julia Dmitrievna",
+  //   link: "https://dribbble.com/shots/23626219-Social-Media-Video-App",
+  //   description: "Modern social media application interface design",
+  //   technologies: [
+  //     {
+  //       name: "Figma",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+  //     },
+  //     {
+  //       name: "Sketch",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg"
+  //     },
+  //     {
+  //       name: "Adobe XD",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg"
+  //     }
+  //   ]
+  // },
   {
     title: "Frontline Creative Studio",
     logo: "",
