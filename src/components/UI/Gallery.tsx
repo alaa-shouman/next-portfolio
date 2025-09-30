@@ -11,7 +11,7 @@ import 'swiper/css/pagination'
 
 const Gallery = () => {
   return (
-    <div className="h-[40rem] sm:h-[40rem] md:h-[100rem]  w-full">
+    <div className="h-[40rem] sm:h-[40rem] md:h-[40rem]  w-full">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{
