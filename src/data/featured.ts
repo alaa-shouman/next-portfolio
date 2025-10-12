@@ -27,25 +27,64 @@ export const featuredData: FeaturedProject[] = [
     technologies: [
       {
         name: "Electron",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg",
       },
       {
         name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       },
       {
         name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "Postgresql",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
-      }
-    ]
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      },
+    ],
+  },
+  {
+    title: "DrApp Application 'CureLink'",
+    logo: "",
+    tag: "React Native Cli - 2025",
+    image: "/assets/images/DrApp.png",
+    credits: "Alaa",
+    link: "https://github.com/alaa-shouman",
+    description: "A comprehensive healthcare application built with React Native CLI for both patients and doctors, featuring appointment scheduling, medical records management, and real-time chat functionality",
+    technologies: [
+      {
+        name: "React Native",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        name: "Expo",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
+      },
+      {
+        name: "Expo",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+      {
+        name: "Node.js",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        name: "Postgresql",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+      },
+    ],
   },
   {
     title: "Jobify",
@@ -58,25 +97,25 @@ export const featuredData: FeaturedProject[] = [
     technologies: [
       {
         name: "React",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       },
       {
         name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       },
       {
         name: "Tailwind CSS",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       },
       {
         name: "Node.js",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
       },
       {
         name: "MongoDB",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-      }
-    ]
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      },
+    ],
   },
   {
     title: "Deal App",
@@ -89,21 +128,21 @@ export const featuredData: FeaturedProject[] = [
     technologies: [
       {
         name: "React Native",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       },
       {
         name: "Expo",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
       },
       {
         name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       },
       {
         name: "MongoDB",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
-      }
-    ]
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+      },
+    ],
   },
   {
     title: "Adhan App",
@@ -116,45 +155,45 @@ export const featuredData: FeaturedProject[] = [
     technologies: [
       {
         name: "React Native",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       },
       {
         name: "Expo",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
       },
       {
         name: "TypeScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
       },
       {
         name: "Firebase",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
-      }
-    ]
-  },
-  {
-    title: "Okarys Brand Identity",
-    logo: "",
-    tag: "Design - Feb 2024",
-    video: "https://cdn.dribbble.com/userupload/3743863/file/original-ed64ce215ecf5f86ead7fedaca82c84c.mp4",
-    credits: "Julia Dmitrievna",
-    link: "https://dribbble.com/shots/19587956-Okarys-Brand-Identity",
-    description: "Complete brand identity design for Okarys",
-    technologies: [
-      {
-        name: "Adobe Illustrator",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
       },
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
-      },
-      {
-        name: "Photoshop",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
-      }
-    ]
+    ],
   },
+  // {
+  //   title: "Okarys Brand Identity",
+  //   logo: "",
+  //   tag: "Design - Feb 2024",
+  //   video: "https://cdn.dribbble.com/userupload/3743863/file/original-ed64ce215ecf5f86ead7fedaca82c84c.mp4",
+  //   credits: "Julia Dmitrievna",
+  //   link: "https://dribbble.com/shots/19587956-Okarys-Brand-Identity",
+  //   description: "Complete brand identity design for Okarys",
+  //   technologies: [
+  //     {
+  //       name: "Adobe Illustrator",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/illustrator/illustrator-plain.svg"
+  //     },
+  //     {
+  //       name: "Figma",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+  //     },
+  //     {
+  //       name: "Photoshop",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg"
+  //     }
+  //   ]
+  // },
   // {
   //   title: "Social Media Video App UI",
   //   logo: "",
@@ -189,16 +228,16 @@ export const featuredData: FeaturedProject[] = [
     technologies: [
       {
         name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
       },
       {
         name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       },
       {
         name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-      }
-    ]
-  }
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      },
+    ],
+  },
 ];
