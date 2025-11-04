@@ -53,7 +53,7 @@ export const featuredData: FeaturedProject[] = [
     tag: "React Native Cli - 2025",
     image: "/assets/images/DrApp.png",
     credits: "Alaa",
-    link: "https://github.com/alaa-shouman",
+    link: "https://chatsrx.webflow.io/",
     description: "A comprehensive healthcare application built with React Native CLI for both patients and doctors, featuring appointment scheduling, medical records management, and real-time chat functionality",
     technologies: [
       {
