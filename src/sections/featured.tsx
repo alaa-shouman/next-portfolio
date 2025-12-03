@@ -26,6 +26,8 @@ const Featured = () => {
                         active={activeCard === index}
                         onClick={() => setActiveCard(index)}
                         link={project.link}
+                        googlePlay={project?.googlePlay}
+                        appStore={project?.appStore}
                         technologies={project.technologies}
                     />
                 ))}
