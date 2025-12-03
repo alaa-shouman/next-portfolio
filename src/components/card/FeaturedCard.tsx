@@ -109,44 +109,42 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
           active ? "bg-black/20" : "bg-black/60"
         )} />
 
-        {/* Project Link Button - only show when active and link exists */}
-        {active && link && link !== '#' && (
-          <div className="absolute top-4 right-4 z-10">
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                "group relative flex items-center justify-center",
-                "w-12 h-12 rounded-xl",
-                "bg-black/10 backdrop-blur-md border border-black/20",
-                "text-black shadow-lg hover:shadow-xl",
-                "transition-all duration-300 ease-out",
-                "hover:bg-black/20 hover:scale-110",
-                "before:absolute before:inset-0 before:rounded-xl",
-                "before:bg-gradient-to-br before:from-black/20 before:to-transparent",
-                "before:opacity-0 before:transition-opacity before:duration-300",
-                "hover:before:opacity-100"
-              )}
-              onClick={(e) => e.stopPropagation()}
-              title={isGitHubLink ? "View on GitHub" : "View Live Project"}
-            >
-              <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
-                {isGitHubLink ? (
-                  <FaGithub className="w-5 h-5" />
-                ) : (
-                  <FaExternalLinkAlt className="w-5 h-5" />
+        {/* Project Link Buttons - only show when active */}
+        {active && (
+          <div className="absolute top-4 right-4 z-10 flex flex-row-reverse gap-2">
+            {link && link !== '#' && (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "group relative flex items-center justify-center",
+                  "w-12 h-12 rounded-xl",
+                  "bg-black/10 backdrop-blur-md border border-black/20",
+                  "text-black shadow-lg hover:shadow-xl",
+                  "transition-all duration-300 ease-out",
+                  "hover:bg-black/20 hover:scale-110",
+                  "before:absolute before:inset-0 before:rounded-xl",
+                  "before:bg-gradient-to-br before:from-black/20 before:to-transparent",
+                  "before:opacity-0 before:transition-opacity before:duration-300",
+                  "hover:before:opacity-100"
                 )}
-              </div>
+                onClick={(e) => e.stopPropagation()}
+                title={isGitHubLink ? "View on GitHub" : "View Live Project"}
+              >
+                <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                  {isGitHubLink ? (
+                    <FaGithub className="w-5 h-5" />
+                  ) : (
+                    <FaExternalLinkAlt className="w-5 h-5" />
+                  )}
+                </div>
 
-              {/* Subtle glow effect */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
-            </a>
-          </div>
-        )}
-        {
-          googlePlay && (
-            <div className="absolute top-4 right-8 z-10">
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              </a>
+            )}
+            {googlePlay && (
               <a
                 href={googlePlay}
                 target="_blank"
@@ -173,12 +171,8 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
               </a>
-            </div>
-          )
-        }
-        {
-          appStore && (
-            <div className="absolute top-4 right-12 z-10">
+            )}
+            {appStore && (
               <a
                 href={appStore}
                 target="_blank"
@@ -205,9 +199,9 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
               </a>
-            </div>
-          )
-        }
+            )}
+          </div>
+        )}
       </div>
 
       {/* Content */}
