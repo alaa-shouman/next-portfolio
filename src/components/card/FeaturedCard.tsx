@@ -146,7 +146,7 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
         )}
         {
           googlePlay && (
-            <div className="absolute top-4 right-4 z-10">
+            <div className="absolute top-4 right-8 z-10">
               <a
                 href={googlePlay}
                 target="_blank"
@@ -178,7 +178,7 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
         }
         {
           appStore && (
-            <div className="absolute top-4 right-4 z-10">
+            <div className="absolute top-4 right-12 z-10">
               <a
                 href={appStore}
                 target="_blank"
