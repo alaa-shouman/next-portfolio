@@ -1,7 +1,7 @@
 import { FC, ReactNode, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import { FaApple, FaExternalLinkAlt, FaGithub, FaGooglePlay } from "react-icons/fa";
 
 interface Technology {
   name: string;
@@ -17,6 +17,8 @@ interface FeaturedCardProps {
   active: boolean;
   onClick?: () => void;
   link: string;
+  googlePlay?: string;
+  appStore?: string;
   technologies?: Technology[];
 }
 
@@ -29,6 +31,8 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
   active,
   onClick,
   link,
+  googlePlay,
+  appStore,
   technologies
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -140,6 +144,70 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
             </a>
           </div>
         )}
+        {
+          googlePlay && (
+            <div className="absolute top-4 right-4 z-10">
+              <a
+                href={googlePlay}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "group relative flex items-center justify-center",
+                  "w-12 h-12 rounded-xl",
+                  "bg-black/10 backdrop-blur-md border border-black/20",
+                  "text-black shadow-lg hover:shadow-xl",
+                  "transition-all duration-300 ease-out",
+                  "hover:bg-black/20 hover:scale-110",
+                  "before:absolute before:inset-0 before:rounded-xl",
+                  "before:bg-gradient-to-br before:from-black/20 before:to-transparent",
+                  "before:opacity-0 before:transition-opacity before:duration-300",
+                  "hover:before:opacity-100"
+                )}
+                onClick={(e) => e.stopPropagation()}
+                title="View on Google Play"
+              >
+                <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                  <FaGooglePlay className="w-5 h-5" />
+                </div>
+
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              </a>
+            </div>
+          )
+        }
+        {
+          appStore && (
+            <div className="absolute top-4 right-4 z-10">
+              <a
+                href={appStore}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  "group relative flex items-center justify-center",
+                  "w-12 h-12 rounded-xl",
+                  "bg-black/10 backdrop-blur-md border border-black/20",
+                  "text-black shadow-lg hover:shadow-xl",
+                  "transition-all duration-300 ease-out",
+                  "hover:bg-black/20 hover:scale-110",
+                  "before:absolute before:inset-0 before:rounded-xl",
+                  "before:bg-gradient-to-br before:from-black/20 before:to-transparent",
+                  "before:opacity-0 before:transition-opacity before:duration-300",
+                  "hover:before:opacity-100"
+                )}
+                onClick={(e) => e.stopPropagation()}
+                title="View on App Store"
+              >
+                <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                  <FaApple className="w-5 h-5" />
+                </div>
+
+                {/* Subtle glow effect */}
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+              </a>
+            </div>
+          )
+        }
       </div>
 
       {/* Content */}

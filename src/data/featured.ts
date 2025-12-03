@@ -11,6 +11,8 @@ export interface FeaturedProject {
   image?: string;
   credits: string;
   link: string;
+  googlePlay?: string;
+  appStore?: string;
   description?: string;
   technologies?: Technology[];
 }
@@ -124,6 +126,8 @@ export const featuredData: FeaturedProject[] = [
     image: "/assets/images/DealApp.png",
     credits: "Alaa",
     link: "https://github.com/alaa-shouman",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.rida.deal",
+    appStore: "https://apps.apple.com/lb/app/dealsy/id6743057671",
     description: "A modern React Native application built with Expo for deal management and discovery",
     technologies: [
       {
