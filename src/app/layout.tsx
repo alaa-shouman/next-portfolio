@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import GrainEffect from "@/components/visualEffects/grainEffect";
 import Cursor from "@/components/cursor/Cursor";
+import { ReactNode } from "react";
 
 const MainFont = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html >

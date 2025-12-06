@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import React, { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 
 interface ButtonProps {
     children: ReactNode;
@@ -10,7 +10,7 @@ interface ButtonProps {
     onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, className, isIcon, link,onClick }) => {
+const Button: FC<ButtonProps> = ({ children, className, isIcon, link,onClick }) => {
     return (
         <>
             {link ? (
@@ -39,7 +39,7 @@ interface ButtoBodyProps {
     onClick?: () => void;
 }
 
-const ButtonBody: React.FC<ButtoBodyProps> = ({ children, className, IsIcon,onClick }) => {
+const ButtonBody: FC<ButtoBodyProps> = ({ children, className, IsIcon,onClick }) => {
     return (
         <div
         onClick={onClick}

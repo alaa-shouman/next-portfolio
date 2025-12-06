@@ -1,12 +1,12 @@
 "use client";
-import React from 'react'
+import { FC } from 'react'
 import AnimatedCursor from 'react-animated-cursor'
 
 interface CursorProps {
   color: string;
 }
 
-export const Cursor: React.FC<CursorProps> = ({ color }) => {
+export const Cursor: FC<CursorProps> = ({ color }) => {
   return (
     <AnimatedCursor
       innerSize={8}

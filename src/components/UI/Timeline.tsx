@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
+import  { FC, ReactNode } from 'react'
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface TimelineProps {
     // Define any props if needed
-    children?: React.ReactNode;
+    children?: ReactNode;
 }
 
 const Timeline: FC<TimelineProps> = ({ children }) => {

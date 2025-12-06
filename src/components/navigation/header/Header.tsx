@@ -1,5 +1,4 @@
 import Profile from '@/components/UI/Profile'
-import React from 'react'
 
 const Header = () => {
   return (

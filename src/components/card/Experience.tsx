@@ -1,5 +1,4 @@
 "use client";
-import React from 'react'
 import Card from '../UI/Card'
 import Timeline, { TimelineItem } from '../UI/Timeline'
 import { experienceData } from '@/data/experience'

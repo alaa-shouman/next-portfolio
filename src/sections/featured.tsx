@@ -2,7 +2,7 @@
 import FeaturedCard from '@/components/card/FeaturedCard'
 import Heading from '@/components/heading/Heading'
 import { featuredData } from '@/data/featured'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 const Featured = () => {
     const [activeCard, setActiveCard] = useState(0);

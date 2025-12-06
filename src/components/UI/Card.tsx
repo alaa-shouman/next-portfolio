@@ -1,6 +1,6 @@
 "use client";
 import { cn } from '@/lib/utils';
-import React, { ReactNode } from 'react'
+import  { FC, ReactNode } from 'react'
 
 interface CardProps {
     title?: string;
@@ -9,7 +9,7 @@ interface CardProps {
     onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ title, children, className }: CardProps) => {
+const Card: FC<CardProps> = ({ title, children, className }: CardProps) => {
     return (
         <div className={cn('relative bg-primary-background w-full h-fit rounded-2xl border border-border p-6 text-primary-foreground overflow-hidden',
             className)}>

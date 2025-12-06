@@ -1,5 +1,4 @@
 "use client";
-import React from 'react'
 import Card from '../UI/Card'
 import Image from 'next/image'
 import Sign from '/public/assets/images/signature.png'

@@ -1,5 +1,4 @@
 "use client";
-import React from 'react'
 import Card from '../UI/Card'
 import { stackData } from '@/data/stack'
 import Image from 'next/image'

@@ -1,8 +1,8 @@
 import { cn } from '@/lib/utils';
-import React, { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
 interface TextAreaProps {
-    icon ?: React.ReactNode;
+    icon ?: ReactNode;
     placeholder ?: string;
     className ?: string;
 }

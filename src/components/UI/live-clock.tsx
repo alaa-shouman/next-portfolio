@@ -1,6 +1,6 @@
 "use client";
 import moment from 'moment-timezone';
-import React, { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react'
 
 interface clockProps {
     timezone?: string;
