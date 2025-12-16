@@ -13,7 +13,7 @@ interface FeaturedCardProps {
   title: string;
   tag: string;
   video?: string;
-  image?: string;
+  image?: any;
   active: boolean;
   onClick?: () => void;
   link: string;
