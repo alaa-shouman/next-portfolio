@@ -1,7 +1,7 @@
 "use client";
 import Card from '../UI/Card'
 import Image from 'next/image'
-import Sign from '/public/assets/images/signature.png'
+import Sign from '@/assets/images/signature.png'
 import Button from '../UI/button'
 import { FaDownload } from 'react-icons/fa'
 const ResumeCard = () => {

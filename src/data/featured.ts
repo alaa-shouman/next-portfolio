@@ -1,3 +1,10 @@
+import HMS from "@/assets/images/hms.png";
+import DrApp from "@/assets/images/DrApp.png";
+import Jobify from "@/assets/images/JOBIFY.png";
+import DealApp from "@/assets/images/DealApp.png";
+import AdhanApp from "@/assets/images/AdhanApp.png";
+import { StaticImageData } from "next/image";
+
 export interface Technology {
   name: string;
   icon: string;
@@ -8,7 +15,7 @@ export interface FeaturedProject {
   logo: string;
   tag: string;
   video?: string;
-  image?: string;
+  image?: string | StaticImageData;
   credits: string;
   link: string;
   googlePlay?: string;
@@ -22,7 +29,7 @@ export const featuredData: FeaturedProject[] = [
     title: "Hotel Management System",
     logo: "",
     tag: "Electron React - 2025",
-    image: "/assets/images/hms.png",
+    image: HMS,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman",
     description: "A modern hotel management system built with Electron React and CASL for permission managing and role-based access control",
@@ -53,7 +60,7 @@ export const featuredData: FeaturedProject[] = [
     title: "DrApp Application 'CureLink'",
     logo: "",
     tag: "React Native Cli - 2025",
-    image: "/assets/images/DrApp.png",
+    image: DrApp,
     credits: "Alaa",
     link: "https://chatsrx.webflow.io/",
     description: "A comprehensive healthcare application built with React Native CLI for both patients and doctors, featuring appointment scheduling, medical records management, and real-time chat functionality",
@@ -92,7 +99,7 @@ export const featuredData: FeaturedProject[] = [
     title: "Jobify",
     logo: "",
     tag: "React - 2025",
-    image: "/assets/images/JOBIFY.png",
+    image: Jobify,
     credits: "Alaa",
     link: "https://jobify-frontend-eight.vercel.app/",
     description: "A modern job search platform built with React and TypeScript",
@@ -123,7 +130,7 @@ export const featuredData: FeaturedProject[] = [
     title: "Deal App",
     logo: "",
     tag: "React Native - 2024",
-    image: "/assets/images/DealApp.png",
+    image: DealApp,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman",
     googlePlay: "https://play.google.com/store/apps/details?id=com.rida.deal",
@@ -152,7 +159,7 @@ export const featuredData: FeaturedProject[] = [
     title: "Adhan App",
     logo: "",
     tag: "React Native - 2024",
-    image: "/assets/images/AdhanApp.png",
+    image: AdhanApp,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman/Prayer",
     description: "An Islamic prayer time application built with React Native and Expo",

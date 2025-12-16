@@ -1,13 +1,13 @@
-import Img1 from "/public/assets/images/gallery/Alaa.png";
-import Img2 from "/public/assets/images/gallery/Alaa_2.jpg";
-import Img3 from "/public/assets/images/gallery/Alaa_3.jpg";
-// import Img4 from "/public/assets/images/gallery/Alaa_4.jpg";
-// import Img5 from "/public/assets/images/gallery/Alaa_4.jpg";
-// import Img6 from "/public/assets/images/gallery/Alaa_5.jpg";
-// import Img7 from "/public/assets/images/gallery/Alaa_6.jpg";
-// import Img8 from "/public/assets/images/gallery/Alaa_7.jpg";
-import Img9 from "/public/assets/images/gallery/Alaa_8.jpg";
-import Img10 from "/public/assets/images/gallery/Alaa_9.jpg";
+import Img1 from "@/assets/images/gallery/Alaa.png";
+import Img2 from "@/assets/images/gallery/Alaa_2.jpg";
+import Img3 from "@/assets/images/gallery/Alaa_3.jpg";
+// import Img4 from "@/assets/images/gallery/Alaa_4.jpg";
+// import Img5 from "@/assets/images/gallery/Alaa_4.jpg";
+// import Img6 from "@/assets/images/gallery/Alaa_5.jpg";
+// import Img7 from "@/assets/images/gallery/Alaa_6.jpg";
+// import Img8 from "@/assets/images/gallery/Alaa_7.jpg";
+import Img9 from "@/assets/images/gallery/Alaa_8.jpg";
+import Img10 from "@/assets/images/gallery/Alaa_9.jpg";
 
 export const galleryImages = [
   {
@@ -55,5 +55,5 @@ export const galleryImages = [
 // TypeScript interface for type safety
 export interface GalleryImage {
   id: number;
-  img: string; // or string if using URL paths
+  img: string | import("next/image").StaticImageData; // or string if using URL paths
 }

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
-import profile from "/public/assets/images/gallery/profile.jpg"
+import profile from "@/assets/images/gallery/profile.jpg"
 const Profile = () => {
     return (
         <div className={cn('flex items-center gap-x-2 sm:gap-x-4 transition-colors duration-75 text-primary-foreground flex-col sm:flex-row text-center sm:text-left')}>
