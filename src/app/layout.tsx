@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import GrainEffect from "@/components/visualEffects/grainEffect";
 import Cursor from "@/components/cursor/Cursor";
 import { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/next"
 
 const MainFont = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -31,6 +32,13 @@ export const metadata: Metadata = {
   description:
     "Experienced Software Engineer specializing in React, React Native, Laravel, and Node.js. Full Stack Developer creating dynamic web and mobile applications.",
   keywords: [
+    "Alaa Shouman",
+    "Dev Alaa Shouman",
+    "Dev alaa shouman",
+    "alaa shouman",
+    "Dev Alaa",
+    "Dev alaa ",
+    "Dev Shouman",
     "Software Engineer",
     "React Developer",
     "React Native Developer",
@@ -40,6 +48,13 @@ export const metadata: Metadata = {
     "Alaa Shouman",
     "Portfolio",
     "Web Developer",
+    "Mobile Developer",
+    "Android Developer",
+    "مبرمح",
+    "مهندس",
+    "مهندس علاء",
+    "مهندس علاء شومان",
+    "مهندس علاء شومان",
   ],
   authors: [{ name: "Alaa Shouman" }],
   creator: "Alaa Shouman",
@@ -86,6 +101,7 @@ export default function RootLayout({
         <GrainEffect />
         <Cursor color="#FFF" />
         {children}
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
