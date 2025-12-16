@@ -86,6 +86,12 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: "https://alaashouman.me",
+  },
+  verification: {
+    google: "google-site-verification=7QfvXZVuFN4MyTK7O-YulAr7vPsJi66NrjpUU7c--Jo", // Replace with your actual code from Google Search Console
+  },
 };
 
 export default function RootLayout({
