@@ -3,6 +3,7 @@ import DrApp from "@/assets/images/DrApp.png";
 import Jobify from "@/assets/images/JOBIFY.png";
 import DealApp from "@/assets/images/DealApp.png";
 import AdhanApp from "@/assets/images/AdhanApp.png";
+import GreenLight from "@/assets/images/GreenLight.png";
 import { StaticImageData } from "next/image";
 
 export interface Technology {
@@ -25,6 +26,37 @@ export interface FeaturedProject {
 }
 
 export const featuredData: FeaturedProject[] = [
+  {
+    title: "Green Light",
+    logo: "",
+    tag: "React Native - 2026",
+    image: GreenLight,
+    credits: "Alaa",
+    link: "https://github.com/alaa-shouman",
+    description: "A Modern Mobile Application to teach Lebanese Drivers the Traffic Lights Rules built with React native and Have both light and dark modes",
+    technologies: [
+      {
+        name: "React Native",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      },
+      {
+        name: "Expo",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
+      },
+      {
+        name: "Expo",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      },
+    ],
+  },
   {
     title: "Hotel Management System",
     logo: "",
@@ -56,6 +88,7 @@ export const featuredData: FeaturedProject[] = [
       },
     ],
   },
+
   {
     title: "DrApp Application 'CureLink'",
     logo: "",
@@ -228,27 +261,27 @@ export const featuredData: FeaturedProject[] = [
   //     }
   //   ]
   // },
-  {
-    title: "Frontline Creative Studio",
-    logo: "",
-    tag: "Web Design - Sep 2023",
-    video: "https://cdn.dribbble.com/userupload/12997464/file/original-a24f5765b5ac067c91523d94848da540.mp4",
-    credits: "Julia Dmitrievna",
-    link: "https://dribbble.com/shots/22408347-Frontline-Creative-Studio-Website",
-    description: "Creative studio website with interactive elements",
-    technologies: [
-      {
-        name: "Figma",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
-      },
-      {
-        name: "JavaScript",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-      },
-      {
-        name: "CSS3",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-      },
-    ],
-  },
+  // {
+  //   title: "Frontline Creative Studio",
+  //   logo: "",
+  //   tag: "Web Design - Sep 2023",
+  //   video: "https://cdn.dribbble.com/userupload/12997464/file/original-a24f5765b5ac067c91523d94848da540.mp4",
+  //   credits: "Julia Dmitrievna",
+  //   link: "https://dribbble.com/shots/22408347-Frontline-Creative-Studio-Website",
+  //   description: "Creative studio website with interactive elements",
+  //   technologies: [
+  //     {
+  //       name: "Figma",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+  //     },
+  //     {
+  //       name: "JavaScript",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  //     },
+  //     {
+  //       name: "CSS3",
+  //       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  //     },
+  //   ],
+  // },
 ];
