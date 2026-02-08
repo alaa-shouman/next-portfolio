@@ -21,6 +21,7 @@ const Featured = () => {
                         logo={project.logo}
                         title={project.title}
                         tag={project.tag}
+                        description={project.description}
                         image={project.image}
                         video={project.video}
                         active={activeCard === index}

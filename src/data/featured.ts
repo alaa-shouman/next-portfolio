@@ -33,7 +33,8 @@ export const featuredData: FeaturedProject[] = [
     image: GreenLight,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman",
-    description: "A Modern Mobile Application to teach Lebanese Drivers the Traffic Lights Rules built with React native and Have both light and dark modes",
+    description:
+      "Interactive mobile app that teaches Lebanese drivers traffic-light rules through animated simulations, quick quizzes, and hands-on examples. Built with React Native and optimized for accessibility, performance, and both light/dark themes.",
     technologies: [
       {
         name: "React Native",
@@ -64,7 +65,7 @@ export const featuredData: FeaturedProject[] = [
     image: HMS,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman",
-    description: "A modern hotel management system built with Electron React and CASL for permission managing and role-based access control",
+    description: "A powerful cross-platform hotel management suite handling reservations, billing, and staff workflows with role-based access via CASL. Built with Electron + React and TypeScript, designed for reliability and real-world operations.",
     technologies: [
       {
         name: "Electron",
@@ -96,7 +97,8 @@ export const featuredData: FeaturedProject[] = [
     image: DrApp,
     credits: "Alaa",
     link: "https://chatsrx.webflow.io/",
-    description: "A comprehensive healthcare application built with React Native CLI for both patients and doctors, featuring appointment scheduling, medical records management, and real-time chat functionality",
+    description:
+      "A comprehensive healthcare companion connecting patients and providers — features include appointment booking, secure medical records, and real-time chat for streamlined care. Built with React Native CLI and engineered for low-latency mobile experiences.",
     technologies: [
       {
         name: "React Native",
@@ -135,7 +137,7 @@ export const featuredData: FeaturedProject[] = [
     image: Jobify,
     credits: "Alaa",
     link: "https://jobify-frontend-eight.vercel.app/",
-    description: "A modern job search platform built with React and TypeScript",
+    description: "A fast, modern job-search platform with advanced filtering, company profiles, and responsive UX. Implemented with React and TypeScript for a snappy, maintainable frontend experience.",
     technologies: [
       {
         name: "React",
@@ -168,7 +170,7 @@ export const featuredData: FeaturedProject[] = [
     link: "https://github.com/alaa-shouman",
     googlePlay: "https://play.google.com/store/apps/details?id=com.rida.deal",
     appStore: "https://apps.apple.com/lb/app/dealsy/id6743057671",
-    description: "A modern React Native application built with Expo for deal management and discovery",
+    description: "A discovery-first deals app built with Expo and React Native — personalized feeds, location-aware offers, and secure authentication make finding great deals effortless.",
     technologies: [
       {
         name: "React Native",
@@ -195,7 +197,7 @@ export const featuredData: FeaturedProject[] = [
     image: AdhanApp,
     credits: "Alaa",
     link: "https://github.com/alaa-shouman/Prayer",
-    description: "An Islamic prayer time application built with React Native and Expo",
+    description: "A lightweight prayer-times app with accurate schedules, customizable notifications, and an offline-friendly UI. Built with React Native, Expo, and Firebase for reliable syncing.",
     technologies: [
       {
         name: "React Native",
