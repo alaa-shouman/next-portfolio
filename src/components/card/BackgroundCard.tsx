@@ -21,9 +21,9 @@ const BackgroundCard = () => {
                         <span className="underline font-medium">Key in Hands in Baalbek, Lebanon</span>
                         {' '}as a{' '}
                         <span className="underline font-medium">React Developer</span>
-                        . During my 6-month tenure, I honed my skills in{' '}
+                        I refined my{' '}
                         <span className="underline font-medium">front-end development</span>
-                        , working on dynamic web applications and user interfaces that delivered exceptional user experiences.
+                        abilities during my six-month stay by working on dynamic web applications and user interfaces that produced outstanding user experiences.
                     </p>
 
                     <p>
@@ -35,7 +35,7 @@ const BackgroundCard = () => {
                         <span className="underline font-medium">cross-platform mobile applications</span>
                         {' '}and{' '}
                         <span className="underline font-medium">desktop application development</span>
-                        , broadening my technical skillset significantly.
+                        , greatly expanding my technical skill set.
                     </p>
 
                     <p>
@@ -51,8 +51,7 @@ const BackgroundCard = () => {
                     </p>
 
                     <p className="italic font-medium text-secondary-foreground">
-                        Driven by innovation and a commitment to excellence, I strive to create impactful software solutions that solve real-world problems and enhance user experiences across all platforms.
-                    </p>
+                        I work to develop significant software solutions that address practical issues and improve user experiences on all platforms, propelled by creativity and a dedication to quality.                    </p>
                 </div>
             </div>
         </Card>

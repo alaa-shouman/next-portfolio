@@ -242,10 +242,8 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Check if it's a GitHub link or deployed project
   const isGitHubLink = link.includes('github.com') || link === '#';
 
-  // Control video playback when active state changes
   useEffect(() => {
     if (videoRef.current && video) {
       if (active) {

@@ -15,8 +15,7 @@ const ResumeCard = () => {
     return (
         <Card className='md:h-full 2xl:h-fit'>
             <p className='text-lg xl:text-2xl font-md text-primary-foreground'>
-                Greetings! I'm Alaa Shouman, a Computer Science graduate from the Lebanese University, and I'm thrilled to be embarking on a journey of innovation and growth in the tech world. With a strong foundation in computer science principles and a hunger for knowledge, I've cultivated a wide range of skills across various technologies.
-            </p>
+                Greetings! I'm Alaa Shouman, a graduate of Lebanese University with a degree in computer science, and I'm excited to start a new and exciting journey in the tech industry. I've developed a broad range of skills across multiple technologies thanks to my strong foundation in computer science principles and my insatiable curiosity.            </p>
             <div className='mb-6'>
                 <Image src={Sign} alt='Alaa Sh' />
             </div>
