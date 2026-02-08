@@ -6,7 +6,7 @@ import Card from "../UI/Card";
 export default function MeCard() {
     return (
         <Card className="2xl:h-full">
-            <div className="w-full h-[400px] sm:h-[500px] overflow-hidden">
+            <div className="w-full h-[25rem] sm:h-[37.5rem] overflow-hidden">
                 {/*background image*/}
                 <Image
                     src={MyImg}
