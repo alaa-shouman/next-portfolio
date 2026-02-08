@@ -358,26 +358,29 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "group relative flex items-center justify-center",
-                      "w-12 h-12 rounded-xl",
-                      "bg-black/10 backdrop-blur-md border border-black/20",
-                      "text-black shadow-lg hover:shadow-xl",
+                      "group relative flex items-center justify-center overflow-hidden",
+                      "w-11 h-11 rounded-xl",
+                      isGitHubLink 
+                        ? "bg-gradient-to-br from-gray-800 via-gray-900 to-black" 
+                        : "bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500",
+                      "text-white shadow-lg hover:shadow-2xl",
                       "transition-all duration-300 ease-out",
-                      "hover:bg-black/20"
+                      "border border-white/10"
                     )}
                     onClick={(e) => e.stopPropagation()}
                     title={isGitHubLink ? "View on GitHub" : "View Live Project"}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.08, y: -2 }}
+                    whileTap={{ scale: 0.92 }}
                   >
-                    <div className="relative z-10">
+                    <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
                       {isGitHubLink ? (
                         <FaGithub className="w-5 h-5" />
                       ) : (
-                        <FaExternalLinkAlt className="w-5 h-5" />
+                        <FaExternalLinkAlt className="w-4 h-4" />
                       )}
                     </div>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                   </motion.a>
                 )}
                 {googlePlay && (
@@ -386,22 +389,23 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "group relative flex items-center justify-center",
-                      "w-12 h-12 rounded-xl",
-                      "bg-black/10 backdrop-blur-md border border-black/20",
-                      "text-black shadow-lg hover:shadow-xl",
+                      "group relative flex items-center justify-center overflow-hidden",
+                      "w-11 h-11 rounded-xl",
+                      "bg-gradient-to-br from-green-500 via-teal-500 to-cyan-600",
+                      "text-white shadow-lg hover:shadow-2xl",
                       "transition-all duration-300 ease-out",
-                      "hover:bg-black/20"
+                      "border border-white/10"
                     )}
                     onClick={(e) => e.stopPropagation()}
                     title="View on Google Play"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.08, y: -2 }}
+                    whileTap={{ scale: 0.92 }}
                   >
-                    <div className="relative z-10">
-                      <FaGooglePlay className="w-5 h-5" />
+                    <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
+                      <FaGooglePlay className="w-4 h-4" />
                     </div>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                   </motion.a>
                 )}
                 {appStore && (
@@ -410,22 +414,23 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
-                      "group relative flex items-center justify-center",
-                      "w-12 h-12 rounded-xl",
-                      "bg-black/10 backdrop-blur-md border border-black/20",
-                      "text-black shadow-lg hover:shadow-xl",
+                      "group relative flex items-center justify-center overflow-hidden",
+                      "w-11 h-11 rounded-xl",
+                      "bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700",
+                      "text-white shadow-lg hover:shadow-2xl",
                       "transition-all duration-300 ease-out",
-                      "hover:bg-black/20"
+                      "border border-white/10"
                     )}
                     onClick={(e) => e.stopPropagation()}
                     title="View on App Store"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileHover={{ scale: 1.08, y: -2 }}
+                    whileTap={{ scale: 0.92 }}
                   >
-                    <div className="relative z-10">
+                    <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
                       <FaApple className="w-5 h-5" />
                     </div>
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400/20 to-purple-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/0 via-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 rounded-xl bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl" />
                   </motion.a>
                 )}
               </motion.div>
