@@ -360,8 +360,8 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                     className={cn(
                       "group relative flex items-center justify-center overflow-hidden",
                       "w-11 h-11 rounded-xl",
-                      isGitHubLink 
-                        ? "bg-gradient-to-br from-gray-800 via-gray-900 to-black" 
+                      isGitHubLink
+                        ? "bg-gradient-to-br from-gray-800 via-gray-900 to-black"
                         : "bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500",
                       "text-white shadow-lg hover:shadow-2xl",
                       "transition-all duration-300 ease-out",
