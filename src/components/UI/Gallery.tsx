@@ -25,12 +25,12 @@ const Gallery = () => {
       >
         {galleryImages.map((image, index) => (
           <SwiperSlide key={image.id || index}>
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full bg-gradient-to-br from-primary-background to-secondary-background">
               <Image
                 src={image.img}
                 alt={`Gallery image ${index + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 priority={index === 0}
                 onError={(e) => {

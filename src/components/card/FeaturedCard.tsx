@@ -295,7 +295,7 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
         }}
       >
         {/* Media background - Video or Image */}
-        <div className="relative w-full h-64 lg:h-80">
+        <div className="relative w-full h-64 lg:h-80 bg-gradient-to-br from-primary-background to-secondary-background">
           {video ? (
             <video
               ref={videoRef}
@@ -315,7 +315,7 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
               alt={title}
               fill
               className={cn(
-                "object-cover transition-all duration-500",
+                "object-contain p-4 transition-all duration-500",
                 !active && "grayscale brightness-50"
               )}
               onError={(e) => {
