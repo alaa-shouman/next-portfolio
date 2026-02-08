@@ -91,12 +91,14 @@ export const featuredData: FeaturedProject[] = [
   },
 
   {
-    title: "DrApp Application 'CureLink'",
+    title: "ChatsRx",
     logo: "",
-    tag: "React Native Cli - 2025",
+    tag: "React Native Cli - 2025 / Electron React - 2026",
     image: DrApp,
     credits: "Alaa",
     link: "https://chatsrx.webflow.io/",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.tech3e.chatsrx",
+    appStore: "https://testflight.apple.com/join/savnrAFz ",
     description:
       "A comprehensive healthcare companion connecting patients and providers — features include appointment booking, secure medical records, and real-time chat for streamlined care. Built with React Native CLI and engineered for low-latency mobile experiences.",
     technologies: [
