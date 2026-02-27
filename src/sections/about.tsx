@@ -23,9 +23,9 @@ const About = () => {
                     <MeCard />
                     <ResumeCard />
                     <BackgroundCard />
-                    <Card title='Gallery' className=''>
+                    {/* <Card title='Gallery' className=''>
                         <Gallery />
-                    </Card>
+                    </Card> */}
                     <div className="space-y-4">
                         <Certifications />
                         <Education />
