@@ -10,7 +10,7 @@ export interface ExperienceItem {
 export const experienceData: ExperienceItem[] = [
     {
         date: "2025",
-        title: "React, React Native and Electron Developer",
+        title: "Full Stack Developer",
         subtitle: "3E-Tech",
         tag: "Current"
     },

@@ -19,13 +19,12 @@ const About = () => {
                 title_1="About"
                 title_2="Me" />
             <div className="space-y-4 my-8 ">
-                <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 md:space-y-0 2xl:grid-cols-3">
+                <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-3">
                     <MeCard />
                     <ResumeCard />
                     <BackgroundCard />
-                    {/* <Card title='Gallery' className=''>
-                        <Gallery />
-                    </Card> */}
+                </div>
+                <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-2">
                     <div className="space-y-4">
                         <Certifications />
                         <Education />
