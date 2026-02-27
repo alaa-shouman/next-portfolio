@@ -3,7 +3,7 @@ import Card from '../UI/Card'
 
 const BackgroundCard = () => {
     return (
-        <Card className="h-48">
+        <Card className="h-100">
             <div className="space-y-4 text-primary-foreground">
                 <h3 className="text-xl font-bold text-primary-foreground mb-6">
                     MY BACKGROUND
