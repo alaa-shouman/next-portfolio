@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import type { SiteSettings } from '@/types/content'
+import { sanityImageLoader } from '@/sanity/imageLoader'
 
 const Profile = ({ site }: { site: SiteSettings }) => {
     return (
@@ -8,6 +9,7 @@ const Profile = ({ site }: { site: SiteSettings }) => {
             <div className="relative w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full flex items-center justify-center bg-gradient-to-r from-blue-joust to-green-benzol">
                 {site.avatar && (
                     <Image
+                        loader={sanityImageLoader}
                         src={site.avatar.url}
                         alt="Profile"
                         width={95}

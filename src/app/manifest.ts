@@ -1,10 +1,13 @@
 import { MetadataRoute } from 'next'
- 
-export default function manifest(): MetadataRoute.Manifest {
+import { getSiteMetadata } from '@/sanity/metadata'
+
+export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const site = await getSiteMetadata()
+
   return {
-    name: 'Alaa Shouman Portfolio',
-    short_name: 'Alaa Shouman',
-    description: 'Full Stack Developer specializing in React, React Native, Laravel, and Node.js.',
+    name: `${site.name} Portfolio`,
+    short_name: site.name,
+    description: site.jsonLdDescription,
     start_url: '/',
     display: 'standalone',
     background_color: '#000000',

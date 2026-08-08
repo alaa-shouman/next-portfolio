@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Card from "../UI/Card";
+import { sanityImageLoader } from "@/sanity/imageLoader";
 import type { ResolvedImage } from "@/types/content";
 
 export default function MeCard({
@@ -16,12 +17,11 @@ export default function MeCard({
                 {/*background image*/}
                 {portrait && (
                     <Image
+                        loader={sanityImageLoader}
                         src={portrait.url}
                         alt="Alaa Shouman"
                         width={portrait.width}
                         height={portrait.height}
-                        // The source is 4096px square; without this the
-                        // optimizer is asked for a 3840px variant and times out.
                         sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
                         placeholder={portrait.blurDataURL ? "blur" : undefined}
                         blurDataURL={portrait.blurDataURL}

@@ -65,6 +65,23 @@ export const siteSettings = defineType({
           title: 'Description',
           type: 'text',
           rows: 3,
+          description: 'The meta description search engines show.',
+        }),
+        defineField({
+          name: 'ogDescription',
+          title: 'Open Graph Description',
+          type: 'text',
+          rows: 3,
+          description:
+            'Shown when the site is shared on social platforms. Kept separate from the meta description because the two have always differed.',
+        }),
+        defineField({
+          name: 'shortDescription',
+          title: 'Short Description',
+          type: 'text',
+          rows: 2,
+          description:
+            'One-line summary used for Twitter cards and the structured-data Person block.',
         }),
         defineField({
           name: 'keywords',

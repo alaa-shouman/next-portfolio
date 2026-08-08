@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import { FaApple, FaExternalLinkAlt, FaGithub, FaGooglePlay, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { sanityImageLoader, isSanityImage } from "@/sanity/imageLoader";
 
 interface Technology {
   name: string;
@@ -314,6 +315,12 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
               src={image}
               alt={title}
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loader={
+                typeof image === "string" && isSanityImage(image)
+                  ? sanityImageLoader
+                  : undefined
+              }
               className={cn(
                 "object-contain p-4 transition-all duration-500",
                 !active && "grayscale brightness-50"

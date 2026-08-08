@@ -7,6 +7,7 @@ import Cursor from "@/components/cursor/Cursor";
 import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next"
 import { SanityLive } from "@/sanity/live";
+import { getSiteMetadata, SITE_URL } from "@/sanity/metadata";
 
 const MainFont = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -23,83 +24,61 @@ const coda = Coda({
   subsets: ["latin"],
 });
 
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await getSiteMetadata();
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://alaashouman.me"),
-  title: {
-    default: "Alaa Shouman | Software Engineer & Full Stack Developer",
-    template: "%s | Alaa Shouman",
-  },
-  description:
-    "Experienced Software Engineer specializing in React, React Native, Laravel, and Node.js. Full Stack Developer creating dynamic web and mobile applications.",
-  keywords: [
-    "Alaa Shouman",
-    "Dev Alaa Shouman",
-    "Dev alaa shouman",
-    "alaa shouman",
-    "Dev Alaa",
-    "Dev alaa ",
-    "Dev Shouman",
-    "Software Engineer",
-    "React Developer",
-    "React Native Developer",
-    "Full Stack Developer",
-    "Laravel Developer",
-    "Node.js Developer",
-    "Alaa Shouman",
-    "Portfolio",
-    "Web Developer",
-    "Mobile Developer",
-    "Android Developer",
-    "مبرمح",
-    "مهندس",
-    "مهندس علاء",
-    "مهندس علاء شومان",
-    "مهندس علاء شومان",
-  ],
-  authors: [{ name: "Alaa Shouman" }],
-  creator: "Alaa Shouman",
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://alaashouman.me",
-    title: "Alaa Shouman | Software Engineer & Full Stack Developer",
-    description:
-      "Experienced Software Engineer specializing in React, React Native, Laravel, and Node.js. Building high-quality web and mobile applications.",
-    siteName: "Alaa Shouman Portfolio",
-    images: [
-      {
-        url: "/assets/images/profile.JPG",
-        width: 1200,
-        height: 630,
-        alt: "Alaa Shouman - Software Engineer",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Alaa Shouman | Software Engineer & Full Stack Developer",
-    description:
-      "Full Stack Developer specializing in React, React Native, Laravel, and Node.js.",
-    images: ["/assets/images/profile.JPG"],
-    creator: "@alaashouman", // Assuming this handle, or we can remove if unknown. I'll remove it to be safe or leave generic.
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
-  alternates: {
-    canonical: "https://alaashouman.me",
-  },
-  verification: {
-    google: "google-site-verification=7QfvXZVuFN4MyTK7O-YulAr7vPsJi66NrjpUU7c--Jo", // Replace with your actual code from Google Search Console
-  },
-};
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: site.title,
+      template: `%s | ${site.name}`,
+    },
+    description: site.description,
+    keywords: site.keywords,
+    authors: [{ name: site.name }],
+    creator: site.name,
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: SITE_URL,
+      title: site.title,
+      description: site.ogDescription,
+      siteName: `${site.name} Portfolio`,
+      images: [
+        {
+          url: site.ogImage,
+          width: 1200,
+          height: 630,
+          alt: `${site.name} - ${site.role}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: site.title,
+      description: site.jsonLdDescription,
+      images: [site.ogImage],
+    },
+    icons: {
+      icon: "/favicon.ico",
+    },
+    alternates: {
+      canonical: SITE_URL,
+    },
+    verification: {
+      google:
+        "google-site-verification=7QfvXZVuFN4MyTK7O-YulAr7vPsJi66NrjpUU7c--Jo",
+    },
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const site = await getSiteMetadata();
+
   return (
     <html >
       <body
@@ -116,12 +95,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              name: "Alaa Shouman",
-              url: "https://alaashouman.me",
-              image: "https://alaashouman.me/assets/images/profile.JPG",
-              jobTitle: "Software Engineer",
-              description:
-                "Full Stack Developer specializing in React, React Native, Laravel, and Node.js.",
+              name: site.name,
+              url: SITE_URL,
+              image: site.ogImage,
+              jobTitle: site.role,
+              description: site.jsonLdDescription,
             }),
           }}
         />

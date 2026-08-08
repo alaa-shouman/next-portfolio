@@ -3,6 +3,7 @@ import Card from '../UI/Card'
 import Image from 'next/image'
 import Button from '../UI/button'
 import { FaDownload } from 'react-icons/fa'
+import { sanityImageLoader } from '@/sanity/imageLoader'
 import type { ResolvedImage } from '@/types/content'
 
 const ResumeCard = ({
@@ -29,6 +30,7 @@ const ResumeCard = ({
             <div className='mb-6'>
                 {signature && (
                     <Image
+                        loader={sanityImageLoader}
                         src={signature.url}
                         alt='Alaa Sh'
                         width={signature.width}

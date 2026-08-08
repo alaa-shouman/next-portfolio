@@ -71,6 +71,8 @@ export const SITE_METADATA_QUERY = defineQuery(`*[_type == "siteSettings"][0]{
   seo {
     title,
     description,
+    ogDescription,
+    shortDescription,
     keywords,
     ogImage { asset->{ url } }
   },
