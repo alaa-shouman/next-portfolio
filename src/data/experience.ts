@@ -9,10 +9,19 @@ export interface ExperienceItem {
 
 export const experienceData: ExperienceItem[] = [
     {
+        date: "2026",
+        title: "Mid-Senior Software Engineer",
+        subtitle: "WEEL",
+    },
+    {
+        date: "2026",
+        title: "Tech Lead",
+        subtitle: "3E-Tech",
+    },
+    {
         date: "2025",
         title: "Full Stack Developer",
         subtitle: "3E-Tech",
-        tag: "Current"
     },
     {
         date: "2024",
