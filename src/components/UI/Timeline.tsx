@@ -32,7 +32,7 @@ export const TimelineItem: FC<TimelineItemProps> = ({ date, subtitle, title, isC
 
             {/* Rail: dot + connector */}
             <div className='flex flex-col items-center'>
-                <div className='mt-1 h-3 w-3 shrink-0 rounded-full border-2 border-green-benzol bg-transparent'></div>
+                <div className='mt-1 h-3 w-3 shrink-0 rounded-full border-2 border-blue-joust/30 bg-transparent'></div>
                 <div className='w-px flex-1 bg-border group-last:hidden'></div>
             </div>
 
@@ -44,10 +44,10 @@ export const TimelineItem: FC<TimelineItemProps> = ({ date, subtitle, title, isC
                             href={link}
                             target='_blank'
                             rel='noopener noreferrer'
-                            className='group/link inline-flex items-center gap-x-2 transition-colors hover:text-green-benzol'
+                            className='group/link inline-flex items-center gap-x-2 transition-colors hover:border-blue-joust/30'
                         >
                             <span>{title}</span>
-                            <FaExternalLinkAlt className='h-3 w-3 text-secondary-foreground transition-colors group-hover/link:text-green-benzol' />
+                            <FaExternalLinkAlt className='h-3 w-3 text-secondary-foreground transition-colors group-hover/link:text-blue-joust' />
                         </a>
                     ) : (
                         title
