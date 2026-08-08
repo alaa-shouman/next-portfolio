@@ -1,15 +1,15 @@
 "use client";
 import Card from '../UI/Card'
 import Timeline, { TimelineItem } from '../UI/Timeline'
-import { experienceData } from '@/data/experience'
+import type { TimelineEntry } from '@/types/content'
 
-const Experience = () => {
+const Experience = ({ items }: { items: TimelineEntry[] }) => {
     return (
         <Card title='My Experience'>
             <Timeline>
-                {experienceData.map((item, index) => (
+                {items.map((item) => (
                     <TimelineItem
-                        key={index}
+                        key={item.id}
                         date={item.date}
                         title={item.title}
                         subtitle={item.subtitle}

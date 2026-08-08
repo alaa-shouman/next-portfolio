@@ -7,31 +7,35 @@ import MeCard from '@/components/card/Me'
 import ResumeCard from '@/components/card/ResumeCard'
 import Stack from '@/components/card/Stack'
 import Heading from '@/components/heading/Heading'
-import Card from '@/components/UI/Card'
-import Gallery from '@/components/UI/Gallery'
-import React from 'react'
+import type { PortfolioContent } from '@/types/content'
 
-const About = () => {
+const About = ({ content }: { content: PortfolioContent }) => {
+    const heading = content.home.aboutHeading;
+
     return (
         <div className='pt-24 px-3 lg:px-8 '>
             <Heading
-                number="02"
-                title_1="About"
-                title_2="Me" />
+                number={heading.number}
+                title_1={heading.titleLine1}
+                title_2={heading.titleLine2} />
             <div className="space-y-4 my-8 ">
                 <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-3">
-                    <MeCard />
-                    <ResumeCard />
-                    <BackgroundCard />
+                    <MeCard pills={content.about.pills} portrait={content.about.portrait} />
+                    <ResumeCard
+                        intro={content.about.resumeIntro}
+                        signature={content.site.signature}
+                        resumeUrl={content.site.resumeUrl}
+                    />
+                    <BackgroundCard background={content.about.background} />
                 </div>
                 <div className="space-y-4 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-4 md:space-y-0 2xl:grid-cols-2">
                     <div className="space-y-4">
-                        <Certifications />
-                        <Education />
+                        <Certifications items={content.certifications} />
+                        <Education items={content.education} />
                     </div>
                     <div className="space-y-4">
-                        <Stack />
-                        <Experience />
+                        <Stack categories={content.stackCategories} />
+                        <Experience items={content.experience} />
                     </div>
 
                 </div>
