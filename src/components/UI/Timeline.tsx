@@ -1,16 +1,13 @@
-import  { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 interface TimelineProps {
-    // Define any props if needed
     children?: ReactNode;
 }
 
 const Timeline: FC<TimelineProps> = ({ children }) => {
     return (
-        <div className='flex flex-col gap-y-8 relative'>
-            {/* Vertical line */}
-            <div className='absolute left-12 top-0 bottom-0 w-px bg-gray-600'></div>
+        <div className='flex flex-col'>
             {children}
         </div>
     )
@@ -27,42 +24,49 @@ interface TimelineItemProps {
 
 export const TimelineItem: FC<TimelineItemProps> = ({ date, subtitle, title, isCourse, link, tag }) => {
     return (
-        <div className='flex items-start gap-x-6 relative'>
+        <div className='group flex gap-x-4'>
             {/* Date */}
-            <div className='text-gray-400 font-medium text-lg w-16 flex-shrink-0'>
+            <div className='w-12 shrink-0 text-right text-sm font-medium text-secondary-foreground tabular-nums pt-0.5'>
                 {date}
             </div>
-            
-            {/* Timeline dot */}
-            <div className='w-3 h-3 bg-primary-foreground rounded-full flex-shrink-0 mt-2 relative z-10'></div>
-            
+
+            {/* Rail: dot + connector */}
+            <div className='flex flex-col items-center'>
+                <div className='mt-1 h-3 w-3 shrink-0 rounded-full border-2 border-green-benzol bg-transparent'></div>
+                <div className='w-px flex-1 bg-border group-last:hidden'></div>
+            </div>
+
             {/* Content */}
-            <div className='flex flex-col gap-y-1 flex-1'>
-                <h3 className='text-white font-semibold text-lg'>
+            <div className='flex flex-1 flex-col pb-8 group-last:pb-0'>
+                <h3 className='font-semibold text-primary-foreground leading-snug'>
                     {link ? (
-                        <a 
-                            href={link} 
-                            target='_blank' 
+                        <a
+                            href={link}
+                            target='_blank'
                             rel='noopener noreferrer'
-                            className='hover:text-green-400 transition-colors flex items-center gap-x-2 group'
+                            className='group/link inline-flex items-center gap-x-2 transition-colors hover:text-green-benzol'
                         >
                             <span>{title}</span>
-                            <FaExternalLinkAlt className='w-4 h-4 text-gray-400 group-hover:text-green-400 transition-colors' />
+                            <FaExternalLinkAlt className='h-3 w-3 text-secondary-foreground transition-colors group-hover/link:text-green-benzol' />
                         </a>
                     ) : (
                         title
                     )}
                 </h3>
-                <p className='text-gray-400 text-sm'>{subtitle}</p>
-                {tag && (
-                    <span className='text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded w-fit mt-1'>
-                        {tag}
-                    </span>
-                )}
-                {isCourse && (
-                    <span className='text-xs bg-blue-600 text-white px-2 py-1 rounded w-fit mt-1'>
-                        Course
-                    </span>
+                <p className='text-sm text-secondary-foreground'>{subtitle}</p>
+                {(tag || isCourse) && (
+                    <div className='mt-2 flex flex-wrap gap-2'>
+                        {tag && (
+                            <span className='rounded-full border border-green-benzol/30 bg-green-benzol/10 px-2.5 py-0.5 text-xs font-medium text-green-benzol'>
+                                {tag}
+                            </span>
+                        )}
+                        {isCourse && (
+                            <span className='rounded-full border border-blue-joust/30 bg-blue-joust/10 px-2.5 py-0.5 text-xs font-medium text-blue-joust'>
+                                Course
+                            </span>
+                        )}
+                    </div>
                 )}
             </div>
         </div>
