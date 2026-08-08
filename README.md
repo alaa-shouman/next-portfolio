@@ -37,6 +37,12 @@ yarn dev         # http://localhost:3333
 yarn deploy      # publishes a hosted Studio you can use from anywhere
 ```
 
+**Node 22.20 or newer is required for the Studio** — one of the Sanity CLI's
+transitive dependencies enforces it, and the install aborts on older versions
+with `The engine "node" is incompatible with this module`. The Next.js app
+itself is happy on 22.16. If you can't upgrade yet, `yarn install
+--ignore-engines` gets you running.
+
 Published edits appear on the running site without a redeploy, within about a
 minute or two. The page is statically rendered and revalidated every 60
 seconds, so the first visitor after that window still sees the previous version
