@@ -20,6 +20,9 @@ export default function MeCard({
                         alt="Alaa Shouman"
                         width={portrait.width}
                         height={portrait.height}
+                        // The source is 4096px square; without this the
+                        // optimizer is asked for a 3840px variant and times out.
+                        sizes="(max-width: 768px) 100vw, (max-width: 1536px) 50vw, 33vw"
                         placeholder={portrait.blurDataURL ? "blur" : undefined}
                         blurDataURL={portrait.blurDataURL}
                         className="absolute top-0 left-0 bottom-0 right-0 h-full w-full object-cover"

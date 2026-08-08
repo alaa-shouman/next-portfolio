@@ -1,6 +1,7 @@
 import HomeClient from "./HomeClient";
-import { localContent } from "@/data/adapter";
+import { getPortfolioContent } from "@/sanity/content";
 
-export default function Home() {
-  return <HomeClient content={localContent} />;
+export default async function Home() {
+  const content = await getPortfolioContent();
+  return <HomeClient content={content} />;
 }

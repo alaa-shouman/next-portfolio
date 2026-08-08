@@ -6,6 +6,7 @@ import GrainEffect from "@/components/visualEffects/grainEffect";
 import Cursor from "@/components/cursor/Cursor";
 import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next"
+import { SanityLive } from "@/sanity/live";
 
 const MainFont = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -107,6 +108,7 @@ export default function RootLayout({
         <GrainEffect />
         <Cursor color="#FFF" />
         {children}
+        <SanityLive />
         <Analytics />
         <script
           type="application/ld+json"
