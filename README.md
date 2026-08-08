@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+A [Next.js](https://nextjs.org) portfolio site. All content — copy, projects,
+timeline entries, images, and SEO metadata — is edited in Sanity rather than
+committed to this repo.
 
-First, run the development server:
+## Running the site
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000. The site reads published content from Sanity,
+so it needs `.env.local` (see below) even in development.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.env.local` is gitignored and must exist locally. The same four values go into
+Vercel's project settings before deploying:
 
-## Learn More
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SANITY_PROJECT_ID` | Sanity project (`8bkp4dkc`) |
+| `NEXT_PUBLIC_SANITY_DATASET` | `production` |
+| `NEXT_PUBLIC_SANITY_API_VERSION` | API date, currently `2026-08-01` |
+| `SANITY_API_READ_TOKEN` | **Server only.** Never prefix this with `NEXT_PUBLIC_` — that would publish a token able to read unpublished drafts. |
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Content lives in the `studio/` folder as a standalone Sanity Studio. It is not
+mounted inside this app, so editing it never triggers a site rebuild.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+cd studio
+yarn install     # first time only
+yarn dev         # http://localhost:3333
+yarn deploy      # publishes a hosted Studio you can use from anywhere
+```
 
-## Deploy on Vercel
+Published edits appear on the running site without a redeploy — the page
+subscribes to Sanity's live content API.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you change anything under `studio/schemaTypes/`, run `yarn schema:deploy`
+from `studio/` so the deployed schema stays in step with the code.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## How content reaches the page
+
+```
+Sanity ──HOME_QUERY──> src/sanity/content.ts ──PortfolioContent──> components
+```
+
+Every component consumes the `PortfolioContent` view model defined in
+[`src/types/content.ts`](src/types/content.ts), and knows nothing about Sanity.
+`src/app/page.tsx` is a Server Component that fetches; `src/app/HomeClient.tsx`
+holds the browser-only pieces (the viewport check and the WebGL background).
+
+Images are served straight from Sanity's CDN via the loader in
+[`src/sanity/imageLoader.ts`](src/sanity/imageLoader.ts) rather than being
+proxied through Next's image optimizer, which would re-download and re-encode
+work Sanity has already done.
+
+## Known follow-ups
+
+- `swiper` is still listed in `package.json` but nothing imports it. Run
+  `yarn remove swiper` when convenient — it rebuilds the whole dependency tree.
+- CORS origins are registered for `localhost:3000`, `localhost:3457` and
+  `https://alaashouman.me`. Add any new preview domain in the Sanity project
+  settings, otherwise live updates silently stop working on that host.
