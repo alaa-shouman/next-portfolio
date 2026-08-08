@@ -37,8 +37,11 @@ yarn dev         # http://localhost:3333
 yarn deploy      # publishes a hosted Studio you can use from anywhere
 ```
 
-Published edits appear on the running site without a redeploy — the page
-subscribes to Sanity's live content API.
+Published edits appear on the running site without a redeploy, within about a
+minute or two. The page is statically rendered and revalidated every 60
+seconds, so the first visitor after that window still sees the previous version
+while the new one regenerates behind them — measured at roughly 80 seconds from
+publish to visible.
 
 If you change anything under `studio/schemaTypes/`, run `yarn schema:deploy`
 from `studio/` so the deployed schema stays in step with the code.

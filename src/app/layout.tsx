@@ -6,8 +6,7 @@ import GrainEffect from "@/components/visualEffects/grainEffect";
 import Cursor from "@/components/cursor/Cursor";
 import { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/next"
-import { SanityLive } from "@/sanity/live";
-import { getSiteMetadata, SITE_URL } from "@/sanity/metadata";
+import { getSiteMetadata, SITE_URL, TWITTER_CREATOR } from "@/sanity/metadata";
 
 const MainFont = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -58,6 +57,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: site.title,
       description: site.jsonLdDescription,
       images: [site.ogImage],
+      creator: TWITTER_CREATOR,
     },
     icons: {
       icon: "/favicon.ico",
@@ -87,7 +87,6 @@ export default async function RootLayout({
         <GrainEffect />
         <Cursor color="#FFF" />
         {children}
-        <SanityLive />
         <Analytics />
         <script
           type="application/ld+json"

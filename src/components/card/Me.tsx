@@ -30,7 +30,7 @@ export default function MeCard({
                 )}
                 <div className="absolute top-[50%] sm:top-[60%] left-0 right-0 px-4 space-y-1.5 sm:space-y-2 pb-4">
                     {pills.map((pill, index) => (
-                        <div key={pill} className="bg-black/[0.7] w-fit py-1.5 px-3 rounded-full">
+                        <div key={`pill-${index}`} className="bg-black/[0.7] w-fit py-1.5 px-3 rounded-full">
                             {index === 0 ? (
                                 <p className="text-primary-foreground leading-[110%] font-bold">
                                     {pill}

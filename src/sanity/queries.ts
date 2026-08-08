@@ -20,8 +20,7 @@ export const HOME_QUERY = defineQuery(`{
     timezone,
     avatar ${IMAGE_PROJECTION},
     signature ${IMAGE_PROJECTION},
-    "resumeUrl": resumeFile.asset->url,
-    socials[]{ label, url }
+    "resumeUrl": resumeFile.asset->url
   },
   "homePage": *[_type == "homePage"][0]{
     heroLines,
@@ -40,6 +39,7 @@ export const HOME_QUERY = defineQuery(`{
     title,
     tag,
     description,
+    video,
     credits,
     link,
     googlePlay,

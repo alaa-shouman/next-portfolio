@@ -26,6 +26,12 @@ export const project = defineType({
       rows: 4,
     }),
     defineField({
+      name: 'video',
+      title: 'Video URL',
+      type: 'url',
+      description: 'Optional. When set, the card plays this instead of the image.',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

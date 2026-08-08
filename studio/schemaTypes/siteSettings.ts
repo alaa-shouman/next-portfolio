@@ -59,6 +59,7 @@ export const siteSettings = defineType({
           name: 'title',
           title: 'Title',
           type: 'string',
+          validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'description',
@@ -66,6 +67,7 @@ export const siteSettings = defineType({
           type: 'text',
           rows: 3,
           description: 'The meta description search engines show.',
+          validation: (Rule) => Rule.required(),
         }),
         defineField({
           name: 'ogDescription',

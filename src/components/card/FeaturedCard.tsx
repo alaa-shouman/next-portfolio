@@ -325,10 +325,6 @@ const FeaturedCard: FC<FeaturedCardProps> = ({
                 "object-contain p-4 transition-all duration-500",
                 !active && "grayscale brightness-50"
               )}
-              onError={(e) => {
-                // Fallback to placeholder if image fails to load
-                e.currentTarget.src = "/assets/images/placeholder-project.jpg";
-              }}
             />
           ) : (
             // Fallback placeholder if neither video nor image is provided

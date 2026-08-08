@@ -19,6 +19,16 @@ const components: PortableTextComponents = {
     underline: ({ children }) => (
       <span className="underline font-medium">{children}</span>
     ),
+    link: ({ children, value }) => (
+      <a
+        href={value?.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline font-medium hover:text-blue-joust transition-colors"
+      >
+        {children}
+      </a>
+    ),
   },
 };
 

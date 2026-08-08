@@ -1,6 +1,7 @@
 import type { PortableTextBlock } from "next-sanity";
 
-import { sanityFetch } from "./live";
+import { client } from "./client";
+import { REVALIDATE_SECONDS } from "./config";
 import { HOME_QUERY } from "./queries";
 import { resolveImage } from "./image";
 import type {
@@ -55,6 +56,7 @@ interface RawProject {
   title?: string | null;
   tag?: string | null;
   description?: string | null;
+  video?: string | null;
   credits?: string | null;
   link?: string | null;
   googlePlay?: string | null;
@@ -127,12 +129,19 @@ const heading = (input: RawHeading | null | undefined): SectionHeading => ({
 });
 
 export async function getPortfolioContent(): Promise<PortfolioContent> {
-  const { data } = await sanityFetch({ query: HOME_QUERY });
-  const result = data as HomeQueryResult | null;
+  const result = await client.fetch<HomeQueryResult | null>(
+    HOME_QUERY,
+    {},
+    { next: { revalidate: REVALIDATE_SECONDS } },
+  );
 
-  if (!result) {
+  // An object projection always yields an object, so a null check here would
+  // never fire. The real failure is an unpopulated dataset, which would
+  // otherwise prerender a silently blank page.
+  if (!result?.siteSettings || !result?.homePage || !result?.aboutPage) {
     throw new Error(
-      "Sanity returned no content for HOME_QUERY. Check the dataset has been populated.",
+      "Sanity is missing one of the singleton documents (siteSettings, homePage, aboutPage). " +
+        "Refusing to render an empty page.",
     );
   }
 
@@ -147,7 +156,10 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
       timezone: site?.timezone ?? "Asia/Beirut",
       avatar: resolveImage(site?.avatar),
       signature: resolveImage(site?.signature),
-      resumeUrl: site?.resumeUrl ?? undefined,
+      // ?dl makes Sanity serve the file as an attachment. Without it the
+      // browser ignores the <a download> attribute (cross-origin) and
+      // navigates the tab to an inline PDF viewer instead.
+      resumeUrl: site?.resumeUrl ? `${site.resumeUrl}?dl=` : undefined,
     },
     home: {
       heroLines: home?.heroLines ?? [],
@@ -166,6 +178,7 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
       title: project.title ?? "",
       tag: project.tag ?? "",
       description: project.description ?? undefined,
+      video: project.video ?? undefined,
       credits: project.credits ?? undefined,
       link: project.link ?? undefined,
       googlePlay: project.googlePlay ?? undefined,

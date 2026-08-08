@@ -8,6 +8,13 @@ export const techBadge = defineType({
   icon: CodeBlockIcon,
   fields: [
     defineField({
+      name: 'key',
+      title: 'Migration key',
+      type: 'string',
+      readOnly: true,
+      description: 'Slug carried over from the original data files. Kept for traceability; nothing reads it at runtime.',
+    }),
+    defineField({
       name: 'name',
       title: 'Name',
       type: 'string',
