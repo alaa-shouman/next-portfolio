@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 import About from "@/sections/about";
 import Featured from "@/sections/featured";
+import Footer from "@/sections/footer";
 import Landing from "@/sections/landing";
 import type { PortfolioContent } from "@/types/content";
 
@@ -44,6 +45,7 @@ export default function HomeClient({ content }: { content: PortfolioContent }) {
       <Landing home={content.home} site={content.site} />
       <Featured heading={content.home.featuredHeading} projects={content.projects} />
       <About content={content} />
+      <Footer site={content.site} />
     </div>
   );
 

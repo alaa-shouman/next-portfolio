@@ -102,8 +102,25 @@ export const siteSettings = defineType({
       ],
     }),
     defineField({
+      name: 'email',
+      title: 'Contact email',
+      type: 'string',
+      description:
+        'Shown in the footer as a mailto link. Leave empty to hide it — it will be scraped, so use an address you are happy to publish.',
+      validation: (Rule) => Rule.email(),
+    }),
+    defineField({
+      name: 'availability',
+      title: 'Availability note',
+      type: 'string',
+      description:
+        'Optional one-liner above the contact details, e.g. "Open to new opportunities". Hidden when empty.',
+    }),
+    defineField({
       name: 'socials',
       title: 'Socials',
+      description:
+        'The footer picks an icon from the URL, so github.com and linkedin.com links are recognised automatically.',
       type: 'array',
       of: [
         defineArrayMember({

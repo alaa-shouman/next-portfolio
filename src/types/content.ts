@@ -55,10 +55,19 @@ export interface SectionHeading {
   titleLine2: string;
 }
 
+export interface SocialLink {
+  key: string;
+  label: string;
+  url: string;
+}
+
 export interface SiteSettings {
   name: string;
   role: string;
   timezone: string;
+  email?: string;
+  availability?: string;
+  socials: SocialLink[];
   avatar?: ResolvedImage | null;
   signature?: ResolvedImage | null;
   resumeUrl?: string;

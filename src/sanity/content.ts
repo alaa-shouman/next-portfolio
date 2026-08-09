@@ -79,6 +79,9 @@ interface HomeQueryResult {
     avatar?: RawImage | null;
     signature?: RawImage | null;
     resumeUrl?: string | null;
+    email?: string | null;
+    availability?: string | null;
+    socials?: { _key: string; label?: string | null; url?: string | null }[] | null;
   } | null;
   homePage?: {
     heroLines?: string[] | null;
@@ -160,6 +163,12 @@ export async function getPortfolioContent(): Promise<PortfolioContent> {
       // browser ignores the <a download> attribute (cross-origin) and
       // navigates the tab to an inline PDF viewer instead.
       resumeUrl: site?.resumeUrl ? `${site.resumeUrl}?dl=` : undefined,
+      email: site?.email ?? undefined,
+      availability: site?.availability ?? undefined,
+      // Drop half-filled entries rather than rendering a link to nowhere.
+      socials: (site?.socials ?? [])
+        .filter((s) => s?.label && s?.url)
+        .map((s) => ({ key: s._key, label: s.label!, url: s.url! })),
     },
     home: {
       heroLines: home?.heroLines ?? [],
