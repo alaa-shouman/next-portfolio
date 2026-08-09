@@ -2,8 +2,15 @@ import { client } from "./client";
 import { REVALIDATE_SECONDS } from "./config";
 import { SITE_METADATA_QUERY } from "./queries";
 
-/** Deployment config rather than editorial content, so it stays in code. */
-export const SITE_URL = "https://alaashouman.me";
+/**
+ * Deployment config rather than editorial content, so it stays in code.
+ *
+ * The `www` host is canonical — the apex 307-redirects to it — and this value
+ * backs metadataBase, the canonical link, the JSON-LD `url`, and the Open
+ * Graph fallback image, so pointing it anywhere else silently mislabels all of
+ * them.
+ */
+export const SITE_URL = "https://www.alaa-shouman.me";
 
 /** Emitted as twitter:creator, as it was before the migration. */
 export const TWITTER_CREATOR = "@alaashouman";
