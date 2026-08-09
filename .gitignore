@@ -41,3 +41,6 @@ yarn-error.log*
 next-env.d.ts
 ._*
 public/assets/.␀_␀A␀l.␀␀␀
+
+# The Studio is source and belongs in the repo. Its own studio/.gitignore
+# already excludes node_modules, dist, .sanity and the generated schema.json.
